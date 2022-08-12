@@ -1,10 +1,15 @@
 <template>
 
+  <v-app-bar
+    density="compact"
+    >
+    <v-app-bar-title>gotti-vue3</v-app-bar-title>
+  </v-app-bar>
+
   <div id="app">
     <v-app id="inspire">
 
       <v-content>
-
        <v-container fluid>
  
         <ul>
@@ -22,13 +27,44 @@
         </ul> 
 
         </v-container> 
-
-      <v-container fluid>
-
-      </v-container> 
-
       </v-content>
-      <v-footer></v-footer>
+
+<v-divider></v-divider>
+
+      <v-footer class="text-white text-center flex-column">
+
+         <v-card
+            elevation="0"
+            rounded="0"
+            width="100%"
+            class=" text-center">
+
+            <v-card-text>
+              <h3>Lottie анимации загруженные с сервера gotti</h3>
+            </v-card-text>
+
+            <v-card-text>
+              <h3>Стек: Vue3, Vuetify, Lottie-player, Axios</h3>
+            </v-card-text>
+
+            <v-card-text>
+
+            <v-btn flat
+              variant="outlined"
+              prepend-icon="mdi-github"
+            >
+              <a href="https://github.com/VladlinMoiseenko/gotti-vue3" target="_blank">gotti-vue3 доступен на github</a>
+            </v-btn>
+
+          </v-card-text>
+
+          <v-card-text>
+            {{ new Date().getFullYear() }} — <a href="https://vladlin.ru/" target="_blank">vladlin.ru</a>
+          </v-card-text>
+        </v-card>
+
+      </v-footer>
+
     </v-app>
   </div>
 
